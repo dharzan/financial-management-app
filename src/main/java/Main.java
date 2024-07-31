@@ -8,6 +8,7 @@ public class Main {
 
     private static Scanner scanner = new Scanner(System.in);
 
+
     public static void main(String args[]){
 
         boolean quit = false;
@@ -23,18 +24,24 @@ public class Main {
 
                 case 0:
 
-                System.out.println("\nShuting down");
-                quit=true;
-                break;
+                    System.out.println("\nShuting down");
+                    quit=true;
+                    break;
 
                 case 1:
-                //methods to handle user interactions
-                break;
+
+                    String username = scanner.next();
+
+                    User user = new User(username);
+                    
+                    
+                    financeManager.addUser(user);
+                    break;
 
 
                 case 5:
 
-                printActions();
+                    printActions();
 
                 break;
             }
@@ -44,7 +51,7 @@ public class Main {
     }
 
     private static void printActions() {
-        // TODO Auto-generated method stub
+      
         
         System.out.println("0 - to shutdown\n" + "1 - to add an account\n" + "5 - to print a list of available actions");
 

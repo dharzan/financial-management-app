@@ -14,7 +14,8 @@ public class User {
    }
    // Getters and setters
 public Object getUsername() {
-    // TODO Auto-generated method stub
-    throw new UnsupportedOperationException("Unimplemented method 'getUsername'");
+    return accounts;
+
+  
 }
 }
