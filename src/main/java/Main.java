@@ -30,10 +30,11 @@ public class Main {
 
                 case 1:
 
+                    System.out.println("\nEnter username to add user:\n");
+
                     String username = scanner.next();
 
                     User user = new User(username);
-                    
                     
                     financeManager.addUser(user);
                     break;
@@ -42,8 +43,9 @@ public class Main {
                 case 5:
 
                     printActions();
+                
 
-                break;
+                    break;
             }
 
         }
