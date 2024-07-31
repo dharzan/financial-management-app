@@ -8,6 +8,10 @@ public class Main {
 
     private static Scanner scanner = new Scanner(System.in);
 
+    private static String username ="";
+
+    private static User user = new User();
+
 
     public static void main(String args[]){
 
@@ -15,7 +19,8 @@ public class Main {
 
         while(!quit){
 
-            System.out.println("\nEnter action: (5 to show available actions)");
+           
+        System.out.println("0 - to shutdown\n" + "1 - to add an account\n" + "2 - get accounts\n");
             int action = scanner.nextInt();
 
             scanner.nextLine();
@@ -32,32 +37,50 @@ public class Main {
 
                     System.out.println("\nEnter username to add user:\n");
 
-                    String username = scanner.next();
+                    username = scanner.next();
 
-                    User user = new User(username);
                     
+                    user.setUsername(username);
                     financeManager.addUser(user);
                     break;
 
+                case 2: 
+
+                //log in option
+
+                case 3:
+
+                // log out
+
+                case 4:
+
+                //get number of accounts
+
+                    System.out.println("\nEnter username ");
+                    username = scanner.next();
+
+                    user.getUsername();
+
+
+                case 6:
+
+                //switch through accounts
 
                 case 5:
 
-                    printActions();
-                
+                // check balance of an account 
 
-                    break;
+
+                case 7:
+
+                // sign up
+                
             }
 
         }
 
     }
 
-    private static void printActions() {
-      
-        
-        System.out.println("0 - to shutdown\n" + "1 - to add an account\n" + "5 - to print a list of available actions");
 
-        System.out.println("Choose your action:");
-    }
     
 }

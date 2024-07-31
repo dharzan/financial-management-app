@@ -22,7 +22,7 @@ public class User {
     }
 
     // Getters and setters
-    public Object getUsername() {
+    public String getUsername() {
         return username;
 
     }
